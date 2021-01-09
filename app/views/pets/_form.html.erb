@@ -1,0 +1,8 @@
+<!-- if @pet has an id, it'll patch, if not, it'll post -->
+<%= simple_form_for(@thing_for_form) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :species, collection: Pet::SPECIES, as: :radio_buttons %>
+  <%= f.input :date, html5: true %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
